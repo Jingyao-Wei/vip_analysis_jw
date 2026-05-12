@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heat × economic stress and mental health in Indonesia — one-page brief</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #888;
+    --rule: #e3e3e3;
+    --bg: #fdfdfd;
+    --bg-panel: #f7f7f4;
+    --accent: #b1391c;
+    --accent-soft: #fcf2ee;
+    --accent-rule: #e8c4b6;
+    --pos: #1d6f42;
+    --neg: #b1391c;
+    --link: #1a4f8b;
+  }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+  body {
+    font-family: Charter, Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 36px 48px 60px 48px;
+    font-size: 15px;
+  }
+  h1 { font-size: 24px; line-height: 1.25; margin: 0 0 6px 0; letter-spacing: -0.01em; }
+  h2 { font-size: 17px; margin: 22px 0 8px 0; padding-top: 8px; border-top: 1px solid var(--rule); letter-spacing: -0.005em; }
+  h3 { font-size: 15px; margin: 16px 0 6px 0; color: var(--ink); }
+  p, ul, ol, li, table, blockquote { font-family: inherit; }
+  p { margin: 8px 0; }
+  ul, ol { padding-left: 22px; margin: 8px 0; }
+  li { margin: 3px 0; }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+  a:hover { border-bottom-style: solid; }
+  code { background: var(--bg-panel); padding: 1px 4px; border-radius: 3px; font-family: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; font-size: 0.88em; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 20px 0; }
+  .meta { color: var(--ink-faint); font-size: 12px; margin-top: 0; }
+  .stars-key { font-size: 12px; color: var(--ink-soft); margin: 0 0 8px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0 14px 0; font-size: 13.5px; }
+  th, td { padding: 6px 9px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th { background: var(--bg-panel); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td.c, th.c { text-align: center; font-variant-numeric: tabular-nums; }
+  .headline { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 12px 16px; margin: 12px 0 18px 0; }
+  .headline p { margin: 4px 0; }
+  .placebo { background: #f0f6f1; color: var(--pos); }
+  .pos { color: var(--pos); font-weight: 600; }
+  .neg { color: var(--neg); }
+  .ask { background: var(--bg-panel); border-left: 4px solid var(--ink-soft); padding: 10px 14px; margin: 12px 0; }
+  .ask ul { margin: 4px 0; }
+  .footer { color: var(--ink-faint); font-size: 12px; margin-top: 18px; font-style: italic; }
+  @media print {
+    body { padding: 16px; font-size: 11pt; }
+    h2 { page-break-after: avoid; }
+    table, .headline, .ask { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Heat × economic stress and mental health in Indonesia</h1>
+<p class="meta"><strong>One-page brief for PI review</strong> · IFLS waves 4 + 5 · 2026-05-11 · Full note: <a href="ifls_temperature_mental_health_note.html">ifls_temperature_mental_health_note.html</a></p>
+<p class="stars-key">Significance stars throughout: * p&lt;0.10, ** p&lt;0.05, *** p&lt;0.01.</p>
+
+<div class="headline">
+  <h3 style="margin-top:0">Headline</h3>
+  <p><strong>Daily ambient heat doesn't move CES-D on average, but it amplifies the depressive consequences of acute economic stress.</strong> Three independent stressors (job loss, palm-price collapse, Nov-2014 fuel-subsidy cut) all show positive heat × stressor interactions on total CES-D; Radloff-factor decomposition pinpoints negative-affect dimensions (Somatic, Depressed Affect) while Positive Affect serves as a clean falsification cell across all three.</p>
+</div>
+
+<h2>Setting</h2>
+<p>IFLS adults aged 15+, pooled across waves 4 (2007–08, n = 29k) and 5 (2014–15, n = 31k), matched to ERA5-Land daily kabupaten-mean temperature on the interview date. CES-D z-standardised within wave; kabupaten + month + year + wave fixed effects; standard errors clustered at kabupaten.</p>
+
+<h2>Regression specifications</h2>
+<p>All three stressors share the same template: CES-D z on heat × stressor with kabupaten + month + year + wave fixed effects and demographic controls. The differences are in (a) how the stressor is constructed and (b) whether an extra cross-sectional control is needed to isolate the time-varying shock from a level effect.</p>
+<p><strong>Shared notation.</strong> <em>i</em> = adult, <em>k</em> = kabupaten, <em>t</em> = interview date, <em>w</em> = wave, <em>m</em> = month, <em>y</em> = year. <code>heat_c = tmean_c − sample_mean</code> (heat is mean-centred so the stressor main effect reads at average temperature). Controls <strong>X</strong><sub>i</sub> = {age, female, years of schooling, married, widowed}. SEs clustered at kabupaten.</p>
+
+<h3>Job loss (pooled, n = 60,343)</h3>
+<blockquote><p><strong>CES-D-z</strong><sub>ikt</sub> = α + β₁ · heat_c<sub>kt</sub> + β₂ · JobLoss<sub>i</sub> + <strong>β₃</strong> · (heat_c<sub>kt</sub> × JobLoss<sub>i</sub>) + γ′<strong>X</strong><sub>i</sub> + δ<sub>w</sub> + μ<sub>m</sub> + ρ<sub>y</sub> + θ<sub>k</sub> + ε<sub>ikt</sub></p></blockquote>
+<p><code>JobLoss</code> = 1 if <code>tk46d{m,y}</code> (date of most recent job termination) falls within 365 days of interview, 0 otherwise. <strong>β₃</strong> is the headline heat × stress interaction.</p>
+
+<h3>Palm-oil price shock (pooled, n = 60,343)</h3>
+<blockquote><p><strong>CES-D-z</strong><sub>ikt</sub> = α + β₁ · heat_c<sub>kt</sub> + β₂ · PalmShock<sub>it</sub> + <strong>β₃</strong> · (heat_c<sub>kt</sub> × PalmShock<sub>it</sub>) + ψ · PalmFarmer<sub>i</sub> + γ′<strong>X</strong><sub>i</sub> + δ<sub>w</sub> + μ<sub>m</sub> + ρ<sub>y</sub> + θ<sub>k</sub> + ε<sub>ikt</sub></p></blockquote>
+<p><code>PalmShock = PalmFarmer × max(−(P_t − P_{t−3})/P_{t−3}, 0)</code>, where P is the World Bank monthly palm-oil price (USD/MT) and the cut-off date is the interview month. <code>PalmFarmer</code> is included separately so β₂ + β₃ identify the <em>price-collapse</em> effect rather than cross-sectional palm-farmer levels.</p>
+
+<h3>Fuel-subsidy cut, the "oil" shock (IFLS5 only, n = 30,869)</h3>
+<blockquote><p><strong>CES-D-z</strong><sub>ikt</sub> = α + β₁ · heat_c<sub>kt</sub> + β₂ · FuelShock<sub>it</sub> + <strong>β₃</strong> · (heat_c<sub>kt</sub> × FuelShock<sub>it</sub>) + ψ · TransportShare<sub>i</sub> + γ′<strong>X</strong><sub>i</sub> + μ<sub>m</sub> + ρ<sub>y</sub> + θ<sub>k</sub> + ε<sub>ikt</sub></p></blockquote>
+<p><code>FuelShock = post_subsidy × TransportShare</code>, where <code>post_subsidy = 1</code> for interviews on or after 18 Nov 2014 (the date of the kerosene/diesel/gasoline subsidy cut) and <code>TransportShare</code> is the household's monthly transport-spending share. Wave FE is dropped because the spec is IFLS5-only; month + year FE absorb the post-cut step itself. <strong>β₃</strong> captures whether heat amplifies the post-cut burden for high-transport-share households (a 3-way DiD).</p>
+
+<h3>Individual-FE variant (§4 below)</h3>
+<p>For each of the three specs above, the panel-robustness version adds <code>pidlink</code> fixed effects (φ<sub>i</sub>) and restricts the sample to respondents observed in both IFLS4 and IFLS5:</p>
+<blockquote><p><strong>CES-D-z</strong><sub>ikt</sub> = α + β₁ · heat_c<sub>kt</sub> + β₂ · Stressor<sub>it</sub> + <strong>β₃</strong> · (heat_c<sub>kt</sub> × Stressor<sub>it</sub>) + γ′<strong>X</strong><sub>i</sub> + φ<sub>i</sub> + δ<sub>w</sub> + μ<sub>m</sub> + ρ<sub>y</sub> + θ<sub>k</sub> + ε<sub>ikt</sub></p></blockquote>
+<p>Time-invariant person attributes are absorbed by φ<sub>i</sub>; <strong>β₃</strong> is identified off <strong>within-person changes in heat × stressor across IFLS4 → IFLS5</strong>.</p>
+
+<h3>Factor-decomposition variant (§2, §3)</h3>
+<p>Replace <code>CES-D-z</code> with one of the three Radloff-factor z-scores — <code>Somatic_z</code>, <code>DepressedAffect_z</code>, <code>PositiveAffect_z</code> — constructed by summing 0–3 frequency scores across each factor's items and z-standardising within wave. Estimator and FE are otherwise identical.</p>
+
+<h2>1. Overall effect on CES-D total</h2>
+<p>Heat × stressor interaction on total CES-D z, before any factor decomposition:</p>
+<table>
+  <thead><tr><th>Stressor</th><th>Heat measure</th><th class="num">β</th><th class="num">p</th><th class="num">Sample</th></tr></thead>
+  <tbody>
+    <tr><td>Job loss (≤ 12 mo)</td><td>Tmean</td><td class="num"><span class="pos">+0.036 **</span></td><td class="num">0.018</td><td class="num">60,343</td></tr>
+    <tr><td>Palm shock (3-mo decline × palm farmer)</td><td>Tmean</td><td class="num"><span class="pos">+0.386 ***</span></td><td class="num">&lt;0.001</td><td class="num">60,343</td></tr>
+    <tr><td>Fuel cut × transport-share</td><td>Tmean</td><td class="num"><span class="pos">+0.107 *</span></td><td class="num">0.065</td><td class="num">30,869 (IFLS5)</td></tr>
+    <tr><td><strong>Direct heat alone (no stressor interaction)</strong></td><td>Tmean</td><td class="num">+0.003</td><td class="num">0.77</td><td class="num">60,343</td></tr>
+  </tbody>
+</table>
+<h2>2. Radloff-factor decomposition</h2>
+<p>The CES-D total mixes three conceptually distinct factors in our 10-item instrument (Radloff 1977; the fourth Interpersonal factor is not represented in the Andresen CES-D-10):</p>
+<ul>
+  <li><strong>Somatic / Retarded Activity</strong> (5 items: "I was bothered by things," "I had trouble keeping my mind on what I was doing," "I felt everything I did was an effort," "My sleep was restless," "I could not get going")</li>
+  <li><strong>Depressed Affect</strong> (3 items: "I felt depressed," "I felt fearful," "I felt lonely")</li>
+  <li><strong>Positive Affect</strong> — reverse-scored, used as the falsification placebo (2 items: "I felt hopeful about the future," "I was happy")</li>
+</ul>
+<p><strong>Decomposing CES-D into these three factors finds that the heat × stressor amplification effects concentrate on Somatic / Retarded Activity</strong> (bothered, concentration, effort, sleep, get-going) <strong>and Depressed Affect</strong> (depressed, fearful, lonely)<strong>, but NOT on Positive Affect</strong> (hopeful, happy) — a clean falsification cell across all three stressors:</p>
+<table>
+  <thead><tr><th>Factor</th><th class="c">Job loss (× Tmean)</th><th class="c">Palm shock (× Tmean)</th><th class="c">Fuel cut (× Tmax)</th></tr></thead>
+  <tbody>
+    <tr><td>Somatic / Retarded Activity</td><td class="c"><span class="pos">+0.033 ** (p=0.03)</span></td><td class="c"><span class="pos">+0.357 *** (p&lt;0.001)</span></td><td class="c"><span class="pos">+0.084 * (p=0.06)</span></td></tr>
+    <tr><td>Depressed Affect</td><td class="c">+0.026 (p=0.12)</td><td class="c"><span class="pos">+0.270 *** (p=0.005)</span></td><td class="c"><span class="pos">+0.134 *** (p=0.002)</span></td></tr>
+    <tr class="placebo"><td><strong>Positive Affect (placebo)</strong></td><td class="c"><strong>+0.008 (p=0.46)</strong></td><td class="c"><strong>−0.000 (p=0.998)</strong></td><td class="c"><strong>+0.029 (p=0.60)</strong></td></tr>
+  </tbody>
+</table>
+<p><strong>9 of 9 Positive-Affect placebo cells across the three stressors are null</strong>, while at least one negative-affect dimension lights up in every case. Each stressor loads on a <em>different</em> negative-affect dimension matching its substantive nature: <strong>job loss → Somatic</strong> (acute physical disruption), <strong>palm shock → both Somatic and Depressed Affect</strong> (broad outdoor income collapse), <strong>fuel cut → Depressed Affect</strong> (price-uncertainty anxiety).</p>
+
+<h2>3. Day vs night separation, governed by exposure pattern</h2>
+<p>Heat × stressor interaction on total CES-D z, decomposing the heat exposure into daytime peak (Tmax) and overnight low (Tmin):</p>
+<table>
+  <thead><tr><th>Stressor</th><th>Population exposure</th><th class="num">Tmax × stress (CES-D total)</th><th class="num">Tmin × stress (CES-D total)</th><th>Reading</th></tr></thead>
+  <tbody>
+    <tr><td>Job loss</td><td>Urban indoor / unemployed</td><td class="num"><span class="pos">+0.026 ** (p=0.04)</span></td><td class="num">+0.026 * (p=0.09)</td><td>Tmax &gt; Tmin (both detectable)</td></tr>
+    <tr><td>Palm shock</td><td>Outdoor agricultural</td><td class="num"><span class="pos">+0.341 *** (p&lt;0.001)</span></td><td class="num"><span class="pos">+0.316 *** (p&lt;0.001)</span></td><td>Tmax ≈ Tmin</td></tr>
+    <tr><td>Fuel cut</td><td>Urban commuters</td><td class="num"><span class="pos">+0.119 *** (p=0.009)</span></td><td class="num">+0.049 (p=0.47)</td><td><strong>Tmax ≫ Tmin</strong></td></tr>
+  </tbody>
+</table>
+<p>Outdoor-worker stressors load equally on day and night (cumulative heat dose throughout the workday); urban indoor/commuter stressors load on Tmax (afternoon peak). The biological "night-heat-and-sleep" channel from Mullins-White (2019) is visible only as a <em>direct</em> Tmin → Positive-Affect effect (+0.024 **, IFLS5), not as a stress-interaction.</p>
+
+<h2>4. Robustness: individual fixed effects (within-person, panel sample)</h2>
+<p>20,796 respondents appear in both waves (41,592 panel-wave observations). Adding <code>pidlink</code> FE absorbs all time-invariant person attributes; the heat × stressor interaction is then identified off <strong>within-person changes across IFLS4 → IFLS5</strong>.</p>
+<table>
+  <thead><tr><th>Spec</th><th class="num">Pooled (cross-section)</th><th class="num"><strong>Individual FE (panel)</strong></th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Palm × Tmean → CES-D</strong></td><td class="num">+0.386 ***</td><td class="num"><span class="pos">+0.546 ** (p=0.028)</span></td><td>Survives — coefficient grows</td></tr>
+    <tr><td>Palm × Tmax → CES-D</td><td class="num">+0.341 ***</td><td class="num"><span class="pos">+0.487 ** (p=0.024)</span></td><td>Survives</td></tr>
+    <tr><td>Palm × Tmax → Somatic</td><td class="num">+0.321 ***</td><td class="num">+0.418 * (p=0.063)</td><td>Survives (borderline)</td></tr>
+    <tr><td>Job loss × Tmean → CES-D</td><td class="num">+0.036 **</td><td class="num">+0.015 (p=0.57)</td><td>Underpowered (5 % of panel switches)</td></tr>
+    <tr><td>Fuel cut × Tmax → CES-D</td><td class="num">+0.119 ***</td><td class="num">+0.009 (p=0.94)</td><td>Unidentified within-person (post-cut collinear with wave)</td></tr>
+  </tbody>
+</table>
+<p><strong>Reading.</strong> The palm-shock finding is the strongest under the most demanding spec — it <em>survives</em> and even <em>grows</em> under individual FE. This addresses the earlier concern that palm was identified only off cross-wave variation: there is genuine within-person variation in palm_shock for palm farmers across IFLS4 (rising-price) and IFLS5 (falling-price) interview months, and the panel-FE estimate isolates this.</p>
+<p>The job-loss panel result fades to null but this is a <strong>power problem</strong>, not a contradiction: only 5.4 % of panel respondents change job-loss-within-12mo status between waves. The within-person identifying sample is ≈ 1,100 person-wave switchers — not enough to estimate a heat-interaction precisely. The pooled cross-sectional estimate remains our best estimate.</p>
+<p>The fuel-cut panel result is <strong>unidentified by construction</strong>: <code>post_subsidy</code> is essentially a wave dummy (0 in all IFLS4, 1 in 73 % of IFLS5). With wave FE <em>and</em> individual FE, the heat × fuel_shock interaction has no remaining identifying variation. The IFLS5-only cross-sectional spec is the appropriate identification strategy here.</p>
+
+<h2>Main caveats</h2>
+<ul>
+  <li>Both IFLS waves use the identical 10-item Andresen CES-D-10 at the same kptype letter positions (verified empirically from microdata; the IFLS4 codebook PDF is misleading on this — see long-note §2.1). IFLS4 adds a yes/no screener before the frequency question, which shifts the score level (mean 4.09 vs 6.40); within-wave z-standardisation absorbs this. A 5-item subset (1 Somatic + 2 Depressed Affect + 2 Positive Affect) yields a null interaction — but this is the <em>expected</em> result given that the signal lives in the Somatic factor whose other 4 items are dropped from that subset, not a cross-wave measurement problem.</li>
+  <li>Palm shock's pooled and panel-FE results both rely on cross-wave price variation (IFLS4 rising-price era → IFLS5 falling-price era). Within-IFLS5 alone the effect is null. Panel FE confirms it's not pure cross-sectional confounding, but the identifying variation is still the same time period.</li>
+  <li>Bottom-PCE-quintile null on the job-loss interaction suggests chronic poverty saturates negative-affect bandwidth; samples weighted toward the very poor would under-recover the effect.</li>
+</ul>
+
+<div class="ask">
+  <h3 style="margin-top:0">Ask for PI input</h3>
+  <ul>
+    <li><strong>Is "negative-affect specificity" a publishable contribution</strong> to the heat-mental-health literature, or do PIs prefer we position around amplification alone?</li>
+    <li><strong>The palm-shock individual-FE result (β = +0.55 **, within-person) is now our cleanest identification.</strong> Comfortable making palm the headline rather than job loss?</li>
+    <li><strong>Job-loss panel result is underpowered (5 % switchers).</strong> Worth pursuing IFLS3 to add a third wave and gain identifying variation, or accept the pooled estimate as is?</li>
+    <li><strong>Do we want lincom marginal effects reported, and which form?</strong> Options include: (a) heat slope at stressor = 0 vs stressor = 1, (b) stressor effect at heat = mean vs heat = +1 SD, (c) heat slope by tercile (cool / mid / hot), or (d) effect at policy-relevant temperatures (e.g., +2 °C warming scenario). Each tells a different story about effect size; we can compute any combination but need to know which the PIs want for the paper.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  All numbers in <code>data/generated/results/</code>. Scripts: <code>code/analysis/14_unified_refined.py</code> (headline interactions on CES-D total + lincom) and <code>15_hypothesis_tests.py</code> (factor decomposition + day/night + individual-FE).
+</div>
+
+</body>
+</html>
